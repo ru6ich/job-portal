@@ -2,6 +2,7 @@ import './App.css';
 import '@mantine/core/styles.css';
 import { createTheme, MantineProvider } from '@mantine/core';
 import HomePage from './Pages/HomePage';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 
 const theme = createTheme ({
   colors: {
@@ -37,7 +38,12 @@ const theme = createTheme ({
 function App() {
   return (
     <MantineProvider theme={theme}>
-      <HomePage/>
+      <BrowserRouter>
+      <Routes>
+        <Route path='*' element={<HomePage/>}/>
+      </Routes>
+        <HomePage/>
+      </BrowserRouter>
     </MantineProvider>
   );
 }
