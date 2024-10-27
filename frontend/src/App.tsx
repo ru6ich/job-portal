@@ -1,6 +1,7 @@
 import './App.css';
 import '@mantine/core/styles.css';
 import { createTheme, MantineProvider } from '@mantine/core';
+import '@mantine/carousel/styles.css';
 import HomePage from './Pages/HomePage';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 
@@ -42,7 +43,6 @@ function App() {
       <Routes>
         <Route path='*' element={<HomePage/>}/>
       </Routes>
-        <HomePage/>
       </BrowserRouter>
     </MantineProvider>
   );
