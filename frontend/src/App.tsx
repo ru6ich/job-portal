@@ -1,14 +1,25 @@
 import './App.css';
 import '@mantine/core/styles.css';
-import { createTheme, MantineProvider } from '@mantine/core';
+import '@mantine/tiptap/styles.css';
+import { createTheme, Divider, MantineProvider } from '@mantine/core';
 import '@mantine/carousel/styles.css';
 import HomePage from './Pages/HomePage';
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
-import FindJobs from './Pages/FindJobs';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import FindJobsPage from './Pages/FindJobsPage';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
+import FindTalentPage from './Pages/FindTalentPage';
+import TalentProfilePage from './Pages/TalentProfilePage';
+import PostJobPage from './Pages/PostJobPage';
+import JobDescPage from './Pages/JobDescPage';
+import ApplyJobPage from './Pages/ApplyJobPage';
+import CompanyPage from './Pages/CompanyPage';
 
 const theme = createTheme ({
+  focusRing: "never",
+  fontFamily:"poppins, sans-serif",
+  primaryColor:"bright-sun",
+  primaryShade:4,
   colors: {
     'bright-sun': [
         '#fffbeb',
@@ -37,19 +48,28 @@ const theme = createTheme ({
         '#2d2d2d',
     ],
   },
-  fontFamily:"poppins, sans-serif"
+  
 })
 
 function App() {
   return (
     <MantineProvider defaultColorScheme='dark' theme={theme}>
       <BrowserRouter>
+      <div className='relative'>
       <Header/>
+      <Divider size="xs" mx="md"/>
       <Routes>
-        <Route path='/find-jobs' element={<FindJobs/>}/>
+        <Route path='/find-jobs' element={<FindJobsPage/>}/>
+        <Route path='/find-talent' element={<FindTalentPage/>}/>
+        <Route path='/company' element={<CompanyPage/>}/>
+        <Route path='/jobs' element={<JobDescPage/>}/>
+        <Route path='/apply-job' element={<ApplyJobPage/>}/>
+        <Route path='/post-job' element={<PostJobPage/>}/>
+        <Route path='/talent-profile' element={<TalentProfilePage/>}/>
         <Route path='*' element={<HomePage/>}/>
       </Routes>
       <Footer/>
+      </div>
       </BrowserRouter>
     </MantineProvider>
   );
