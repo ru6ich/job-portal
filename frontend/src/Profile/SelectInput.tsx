@@ -3,13 +3,15 @@ import { Combobox, InputBase, ScrollArea, useCombobox } from '@mantine/core';
 
 const SelectInput = (props:any) => {
     useEffect(()=>{
-        setData(props.options)
+        setData(props.options);
+        setValue(props.value);
+        setSearch(props.value);
     }, [])
   const combobox = useCombobox({
     onDropdownClose: () => combobox.resetSelectedOption(),
   });
 
-  const [data, setData] = useState <string[]>([]);
+  const [data, setData] = useState <string[]>([]); 
   const [value, setValue] = useState<string | null>(null);
   const [search, setSearch] = useState('');
 
@@ -22,7 +24,7 @@ const SelectInput = (props:any) => {
     <Combobox.Option value={item} key={item}>
       {item}
     </Combobox.Option>
-  ));
+  )); 
 
   return (
     <Combobox
@@ -41,8 +43,9 @@ const SelectInput = (props:any) => {
       }}
     >
       <Combobox.Target>
-        <InputBase withAsterisk className='[&_input]:font-medium'
+        <InputBase withAsterisk
         label={props.label}
+        leftSection={<props.leftSection stroke={1.5}/>}
           rightSection={<Combobox.Chevron />}
           value={search}
           onChange={(event) => {

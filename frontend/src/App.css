@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+#specialitiesList {
+  list-style: inside;
+}
