@@ -1,7 +1,7 @@
-package com.jobportal.backend.entity;
+package entity;
 
-import com.jobportal.backend.dto.AccountType;
-import com.jobportal.backend.dto.UserDTO;
+import dto.AccountType;
+import dto.UserDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,7 +15,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 public class User {
     @Id
-    private String id;
+    private Long id;
     private String name;
     @Indexed(unique = true)
     private String email;

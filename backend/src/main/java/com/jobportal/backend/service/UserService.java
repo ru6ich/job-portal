@@ -1,7 +1,8 @@
-package com.jobportal.backend.service;
+package service;
 
-import com.jobportal.backend.dto.UserDTO;
+import dto.UserDTO;
+import exception.JobPortalException;
 
 public interface UserService {
-    public UserDTO registerUser(UserDTO userDTO);
+    public UserDTO registerUser(UserDTO userDTO) throws JobPortalException;
 }

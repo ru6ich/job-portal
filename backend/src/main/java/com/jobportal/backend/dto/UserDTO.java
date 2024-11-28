@@ -1,20 +1,18 @@
-package com.jobportal.backend.dto;
+package dto;
 
-import com.jobportal.backend.entity.User;
+import entity.User;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserDTO {
-    private String id;
+    private Long id;
     @NotBlank(message = "{user.name.absent}")
     private String name;
     @NotBlank(message = "{user.email.absent}")

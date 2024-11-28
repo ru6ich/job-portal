@@ -1,4 +1,4 @@
-package com.jobportal.backend.utility;
+package utility;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
