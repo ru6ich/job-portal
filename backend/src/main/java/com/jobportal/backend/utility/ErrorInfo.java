@@ -1,4 +1,4 @@
-package utility;
+package com.jobportal.backend.utility;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

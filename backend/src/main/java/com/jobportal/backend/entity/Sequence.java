@@ -1,4 +1,4 @@
-package entity;
+package com.jobportal.backend.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

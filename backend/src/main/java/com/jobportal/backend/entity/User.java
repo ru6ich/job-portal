@@ -1,7 +1,7 @@
-package entity;
+package com.jobportal.backend.entity;
 
-import dto.AccountType;
-import dto.UserDTO;
+import com.jobportal.backend.dto.AccountType;
+import com.jobportal.backend.dto.UserDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

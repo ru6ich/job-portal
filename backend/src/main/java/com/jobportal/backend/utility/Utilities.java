@@ -1,7 +1,7 @@
-package utility;
+package com.jobportal.backend.utility;
 
-import entity.Sequence;
-import exception.JobPortalException;
+import com.jobportal.backend.entity.Sequence;
+import com.jobportal.backend.exception.JobPortalException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.FindAndModifyOptions;
 import org.springframework.data.mongodb.core.MongoOperations;
