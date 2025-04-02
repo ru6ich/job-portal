@@ -1,4 +1,4 @@
-import { Anchor, Button, Checkbox, Group, PasswordInput, Radio, rem, TextInput } from "@mantine/core";
+import { Anchor, Button, Checkbox, Group, LoadingOverlay, PasswordInput, Radio, rem, TextInput } from "@mantine/core";
 import { IconAt, IconCheck, IconLock, IconX } from "@tabler/icons-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from 'react';
@@ -19,6 +19,7 @@ const SignUp = (props:any) => {
     const [data, setData] = useState<{[key:string]:string}>(form);
     const [formError, setFormError] = useState<{[key:string]:string}>(form);
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
     const handleCHange = (event:any) => {
         if(typeof(event)=="string"){
             setData({...data, accountType:event})
@@ -40,6 +41,7 @@ const SignUp = (props:any) => {
         }
     } 
     const handleSubmit = () => {
+        
         let valid = true, newFormError: {[key:string]:string} = {};
         for(let key in data){
             if (key === "accountType")
@@ -53,6 +55,7 @@ const SignUp = (props:any) => {
         }
         setFormError(newFormError);
         if (valid === true){
+            setLoading(true);
             registerUser(data).then((res)=>{
                 console.log(res);
                 setData(form);
@@ -66,9 +69,11 @@ const SignUp = (props:any) => {
                     className:"!border-green-500"
                   })
                   setTimeout(() => {
+                    setLoading(false);
                     navigate("/login");
                   }, 4000)
             }).catch((err)=>{
+                setLoading(false);
                 console.log(err)
                 notifications.show({
                     title: 'Registration Failed',
@@ -83,7 +88,13 @@ const SignUp = (props:any) => {
                 
         }
     }
-    return <div className="w-1/2 px-20 flex flex-col justify-center gap-3">
+    return <><LoadingOverlay
+        visible={loading}
+        zIndex={1000}
+        className="translate-x-1/2"
+        overlayProps={{ radius: 'sm', blur: 2 }}
+        loaderProps={{ color: 'bright-sun.4', type: 'bars' }}
+      /><div className="w-1/2 px-20 flex flex-col justify-center gap-3">
         <div className="text-2xl font-semibold">Create Account</div>
             <TextInput value={data.name} error={formError.name} name="name" onChange={handleCHange} withAsterisk label="Full Name" placeholder="Your Name"/>
             <TextInput value={data.email} error={formError.email} name="email" onChange={handleCHange} withAsterisk leftSection={<IconAt style={{ width: rem(16), height: rem(16) }} />}
@@ -106,10 +117,10 @@ const SignUp = (props:any) => {
                     </Group>
                 </Radio.Group>
             <Checkbox autoContrast label={<>I accept {''}<Anchor>terms & condition</Anchor></>}/>
-            <Button onClick={handleSubmit} autoContrast variant="filled">Sign Up</Button>
+            <Button loading={loading} onClick={handleSubmit} autoContrast variant="filled">Sign Up</Button>
             <div className="mx-auto">Have an account? <span className="text-bright-sun-400
                 hover:underline cursor-pointer" onClick={() => {navigate("/login"); setFormError(form); setData(form)}}>Login</span></div>
-    </div>
+    </div></>
 }
 
 export default SignUp;
