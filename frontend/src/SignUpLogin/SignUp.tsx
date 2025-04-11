@@ -31,12 +31,12 @@ const SignUp = (props:any) => {
         console.log(formError)
         if(name === "password" && data.confirmPassword !== ""){
             let err = "";
-            if(data.confirmPassword !== value) err = "Passwords don't match.";
+            if(data.confirmPassword !== value) err = "Пароли не совпадают.";
             setFormError({...formError, [name]:signUpValidation(name, value), confirmPassword:err})
         }
         if(name === "confirmPassword"){
             if (data.password !== value)
-                 setFormError({...formError, [name]:"Passwords don't match."});
+                 setFormError({...formError, [name]:"Пароли не совпадают."});
             else setFormError({...formError, confirmPassword:""});
         }
     } 
@@ -49,7 +49,7 @@ const SignUp = (props:any) => {
             if (key !== "confirmPassword") 
                 newFormError[key] = signUpValidation(key, data[key]);
             else if (data[key]!==data["password"])
-                newFormError[key] = "Passwords do not match.";
+                newFormError[key] = "Пароли не совпадают.";
             if (newFormError[key])
                 valid = false;
         }
@@ -60,8 +60,8 @@ const SignUp = (props:any) => {
                 console.log(res);
                 setData(form);
                 notifications.show({
-                    title: 'Registered Successfully',
-                    message: 'Redirecting to login page...',
+                    title: 'Аккаунт успешно зарегистрирован',
+                    message: 'Перенаправляем на домашнюю страницу...',
                     withCloseButton: true,
                     icon: <IconCheck style={{width:"90%", height:"90%"}}/>,
                     color: "teal",
@@ -76,7 +76,7 @@ const SignUp = (props:any) => {
                 setLoading(false);
                 console.log(err)
                 notifications.show({
-                    title: 'Registration Failed',
+                    title: 'Ошибка регистрации',
                     message: err.response.data.errorMessage,
                     withCloseButton: true,
                     icon: <IconX style={{width:"90%", height:"90%"}}/>,
@@ -95,31 +95,31 @@ const SignUp = (props:any) => {
         overlayProps={{ radius: 'sm', blur: 2 }}
         loaderProps={{ color: 'bright-sun.4', type: 'bars' }}
       /><div className="w-1/2 px-20 flex flex-col justify-center gap-3">
-        <div className="text-2xl font-semibold">Create Account</div>
-            <TextInput value={data.name} error={formError.name} name="name" onChange={handleCHange} withAsterisk label="Full Name" placeholder="Your Name"/>
+        <div className="text-2xl font-semibold">Создать аккаунт</div>
+            <TextInput value={data.name} error={formError.name} name="name" onChange={handleCHange} withAsterisk label="ФИО" placeholder="Ваше ФИО"/>
             <TextInput value={data.email} error={formError.email} name="email" onChange={handleCHange} withAsterisk leftSection={<IconAt style={{ width: rem(16), height: rem(16) }} />}
-                label="Email" placeholder="Your email"/>
+                label="Email" placeholder="Ваш email"/>
             <PasswordInput value={data.password} error={formError.password} name="password" onChange={handleCHange} withAsterisk leftSection={<IconLock style={{ width: rem(18), height: rem(18) }} stroke={1.5} />}
-                label="Password" placeholder="Password" />
+                label="Пароль" placeholder="Пароль" />
             <PasswordInput value={data.confirmPassword} error={formError.confirmPassword} name="confirmPassword" onChange={handleCHange} withAsterisk leftSection={<IconLock style={{ width: rem(18), height: rem(18) }} stroke={1.5} />}
-                label="Confirm Password" placeholder="Confirm Password" />
+                label="Подтвердить пароль" placeholder="Подтвердить пароль" />
                 <Radio.Group
                     value={data.accountType}
                     onChange={handleCHange}
-                    label="Are you?"
+                    label="Кто вы?"
                     withAsterisk>
 
                     <Group mt="xs">
                         <Radio className="py-4 px-6 border hover:bg-mine-shaft-900 border-mine-shaft-800 rounded-lg
-                          has-[:checked]:bg-bright-sun-400/5 has-[:checked]:border-bright-sun-400" autoContrast value="APPLICANT" label="Applicant" />
+                          has-[:checked]:bg-bright-sun-400/5 has-[:checked]:border-bright-sun-400" autoContrast value="APPLICANT" label="Соискатель" />
                         <Radio className="py-4 px-6 border hover:bg-mine-shaft-900 border-mine-shaft-800 rounded-lg
-                          has-[:checked]:bg-bright-sun-400/5 has-[:checked]:border-bright-sun-400" autoContrast value="EMPLOYER" label="Employer" />
+                          has-[:checked]:bg-bright-sun-400/5 has-[:checked]:border-bright-sun-400" autoContrast value="EMPLOYER" label="Работодатель" />
                     </Group>
                 </Radio.Group>
-            <Checkbox autoContrast label={<>I accept {''}<Anchor>terms & condition</Anchor></>}/>
-            <Button loading={loading} onClick={handleSubmit} autoContrast variant="filled">Sign Up</Button>
-            <div className="mx-auto">Have an account? <span className="text-bright-sun-400
-                hover:underline cursor-pointer" onClick={() => {navigate("/login"); setFormError(form); setData(form)}}>Login</span></div>
+            <Checkbox autoContrast label={<>Я принимаю {''}<Anchor>правила & условия</Anchor></>}/>
+            <Button loading={loading} onClick={handleSubmit} autoContrast variant="filled">Зарегистрироваться</Button>
+            <div className="mx-auto">Уже есть аккаунт? <span className="text-bright-sun-400
+                hover:underline cursor-pointer" onClick={() => {navigate("/login"); setFormError(form); setData(form)}}>Войти</span></div>
     </div></>
 }
 

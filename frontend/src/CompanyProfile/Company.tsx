@@ -20,16 +20,16 @@ const Company = () => {
                     <Avatar>+10K</Avatar>
                 </Avatar.Group></div>
                 <div className="flex gap-1 text-lg text-mine-shaft-300 items-center">
-                    <IconMapPin className="h-5 w-5" stroke={1.5}/> New York, USA
+                    <IconMapPin className="h-5 w-5" stroke={1.5}/> Самара, Россия
                 </div>
             <Divider my="xl"/>
             <div>
                 <Tabs variant="outline" radius="lg" defaultValue="about"> 
                     <Tabs.List className="[&_button]:!text-lg font-semibold-mb-5 
                      [&_button[data-active='true']]:text-bright-sun-400">
-                        <Tabs.Tab value="about">About</Tabs.Tab>
-                        <Tabs.Tab value="jobs">Jobs</Tabs.Tab>
-                        <Tabs.Tab value="employees">Employees</Tabs.Tab>
+                        <Tabs.Tab value="about">О себе</Tabs.Tab>
+                        <Tabs.Tab value="jobs">Вакансии</Tabs.Tab>
+                        <Tabs.Tab value="employees">Работники</Tabs.Tab>
                     </Tabs.List>
 
                     <Tabs.Panel value="about"><AboutComp/></Tabs.Panel>

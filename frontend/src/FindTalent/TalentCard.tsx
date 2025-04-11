@@ -37,7 +37,7 @@ const TalentCard = (props:any) => {
             <Divider size="xs" color="mineShaft.7" />
             {
                 props.invited?<div className="flex gap-1 text-mine-shaft-200 text-sm items-center">
-                    <IconCalendarMonth stroke={1.5}/>Interview: August 27, 2024 10:00 AM
+                    <IconCalendarMonth stroke={1.5}/>Собеседование: 27 Августа, 2025 10:00
                 </div>:
                     <div className="flex justify-between">
                     <div className="font-semibold text-mine-shaft-200">
@@ -53,20 +53,20 @@ const TalentCard = (props:any) => {
             {
                     !props.invited &&<>
                     <Link to="/talent-profile">
-                        <Button color="bright-sun.4" variant="outline" fullWidth>Profile</Button>
+                        <Button color="bright-sun.4" variant="outline" fullWidth>Профиль</Button>
                     </Link>
                     <div>
-                        {props.posted?<Button onClick={open} rightSection={<IconCalendarMonth className="w-5 h-5"/>} color="bright-sun.4" variant="light" fullWidth>Schedule</Button>:<Button color="bright-sun.4" variant="light" fullWidth>Message</Button>}
+                        {props.posted?<Button onClick={open} rightSection={<IconCalendarMonth className="w-5 h-5"/>} color="bright-sun.4" variant="light" fullWidth>Запланировать</Button>:<Button color="bright-sun.4" variant="light" fullWidth>Сообщение</Button>}
                     </div>
                 </>
             }
             {
                 props.invited && <>
                     <div>
-                        <Button color="bright-sun.4" variant="outline" fullWidth>Accept</Button>
+                        <Button color="bright-sun.4" variant="outline" fullWidth>Принять</Button>
                     </div>
                     <div>
-                        <Button color="bright-sun.4" variant="light" fullWidth>Reject</Button>
+                        <Button color="bright-sun.4" variant="light" fullWidth>Отклонить</Button>
                     </div>
                 </>
             }
@@ -75,7 +75,7 @@ const TalentCard = (props:any) => {
                 <div className="flex flex-col gap-4">
                     <DateInput value={value} minDate={new Date()} onChange={setValue} label="Date" placeholder="Enter Date"/>
                     <TimeInput label="Time" ref={ref} onClick={() => ref.current?.showPicker()}/>
-                    <Button color="bright-sun.4" variant="light" fullWidth>Schedule</Button>
+                    <Button color="bright-sun.4" variant="light" fullWidth>Запланировать</Button>
                 </div>
             </Modal>
         </div>

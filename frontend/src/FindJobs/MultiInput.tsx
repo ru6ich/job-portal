@@ -68,7 +68,7 @@ const MultiInput = (props:any) => {
               <>
                 {values}
                 {value.length > 1 && (
-                  <Pill>+{value.length - 1} more</Pill>
+                  <Pill>+{value.length - 1} больше</Pill>
                 )}
               </>
             ) : (
@@ -83,17 +83,17 @@ const MultiInput = (props:any) => {
       <Combobox.Search
             value={search}
             onChange={(event) => setSearch(event.currentTarget.value)}
-            placeholder="Search groceries"
+            placeholder="Поиск"
           />
         <Combobox.Options>
           {options}
 
           {!exactOptionMatch && search.trim().length > 0 && (
-            <Combobox.Option value="$create">+ Create {search}</Combobox.Option>
+            <Combobox.Option value="$create">+ Создать {search}</Combobox.Option>
           )}
 
           {exactOptionMatch && search.trim().length > 0 && options.length === 0 && (
-            <Combobox.Empty>Nothing found</Combobox.Empty>
+            <Combobox.Empty>Ничего не найдено</Combobox.Empty>
           )}
         </Combobox.Options>
       </Combobox.Dropdown>

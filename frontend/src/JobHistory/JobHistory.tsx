@@ -4,15 +4,15 @@ import Card from "./Card";
 
 const JobHistory = () => {
     return <div className="">
-        <div className="text-2xl font-semibold mb-5 ">Job History</div>
+        <div className="text-2xl font-semibold mb-5 ">Мои вакансии</div>
         <div>
             <Tabs variant="outline" radius="lg" defaultValue="applied"> 
                 <Tabs.List className="[&_button]:!text-lg font-semibold-mb-5 
                     [&_button[data-active='true']]:text-bright-sun-400">
-                    <Tabs.Tab value="applied">Applied</Tabs.Tab>
-                    <Tabs.Tab value="saved">Saved</Tabs.Tab>
-                    <Tabs.Tab value="offered">Offered</Tabs.Tab>
-                    <Tabs.Tab value="interviewing">Interviewing</Tabs.Tab>
+                    <Tabs.Tab value="applied">Поданые</Tabs.Tab>
+                    <Tabs.Tab value="saved">Сохраненные</Tabs.Tab>
+                    <Tabs.Tab value="offered">Принятые</Tabs.Tab>
+                    <Tabs.Tab value="interviewing">Собеседование</Tabs.Tab>
                 </Tabs.List>
 
                 <Tabs.Panel value="applied">

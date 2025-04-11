@@ -3,103 +3,103 @@ const companies = ["Google", "Amazon", "Figma", "Netflix", "Meta",
 
 const jobCategory = [
     {
-        "name": "Digital Marketing",
-        "desc": "Promote brands online with marketing strategies",
-        "jobs": "1k"
+        "name": "Цифровой маркетинг",
+        "desc": "Продвижение брендов в Интернете и СМИ",
+        "jobs": "1000"
     },
     {
-        "name": "Web Developer",
-        "desc": "Build and maintain websites for clients",
-        "jobs": "2k"
+        "name": "Web Разработчик",
+        "desc": "Создание и поддержка веб-сайтов для клиентов",
+        "jobs": "2000"
     },
     {
-        "name": "Arts & Design",
-        "desc": "Create visual content for branding and media",
+        "name": "Искусство и дизайн",
+        "desc": "Создание визуального контента для брендинга",
         "jobs": "500"
     },
     {
-        "name": "UI-UX Designer",
-        "desc": "Design user interfaces and enhance user experience",
+        "name": "UI-UX Дизайнер",
+        "desc": "Разработка пользовательских интерфейсов",
         "jobs": "800"
     },
     {
-        "name": "Content Writing",
-        "desc": "Write and edit content for various platforms",
-        "jobs": "1.5k"
+        "name": "Автор Контента",
+        "desc": "Писать и редактировать контент для компаний",
+        "jobs": "1500"
     },
     {
-        "name": "Data Entry",
-        "desc": "Input data into systems accurately and efficiently",
-        "jobs": "1k"
+        "name": "Ввод данных",
+        "desc": "Точный и эффективный ввод данных в системы",
+        "jobs": "1000"
     },
     {
-        "name": "Customer Support",
-        "desc": "Assist customers with inquiries and issues",
-        "jobs": "1.2k"
+        "name": "Поддержка клиентов",
+        "desc": "Помощь в решении проблем и вопросов",
+        "jobs": "1200"
     },
     {
-        "name": "Sales",
-        "desc": "Sell products and services to customers",
+        "name": "Продажи",
+        "desc": "Продавать продукты и услуги клиентам",
         "jobs": "900"
     },
     {
-        "name": "Finance",
-        "desc": "Manage financial records and transactions",
+        "name": "Финансы",
+        "desc": "Ведение финансовых записей и операций",
         "jobs": "700"
     },
     {
-        "name": "Human Resource",
-        "desc": "Recruit, manage, and support company employees",
+        "name": "HR",
+        "desc": "Найм сотрудников и управление ими",
         "jobs": "600"
     }
 ]
 
 const work = [
     {
-        "name": "Build Your Resume",
-        "desc": "Create a standout resume with your skills."
+        "name": "Создайте свое резюме",
+        "desc": "Создайте выдающееся резюме с вашими навыками."
     },
     {
-        "name": "Apply for Job",
-        "desc": "Find and apply for jobs that match your skills."
+        "name": "Подайте заявку на работу",
+        "desc": "Находите и подавайте заявки на вакансии, соответствующие вашим навыкам."
     },
     {
-        "name": "Get Hired",
-        "desc": "Connect with employers and start your new job."
+        "name": "Получите работу",
+        "desc": "Свяжитесь с работодателями и приступайте к новой работе."
     }
 ]
 
 
 const testimonials = [
     {
-        "name": "Ivan Solkin",
-        "testimonial": "This job portal made job search easy and quick. Recommended to all job seekers!",
+        "name": "Иван Карамазов",
+        "testimonial": "Этот портал облегчил и ускорил поиск работы. Рекомендую всем соискателям!",
         "rating": 5,
         "avatar": "avatar"
     },
     {
-        "name": "Ekaterina Shadrina",
-        "testimonial": "I secured a job offer within days of applying. Exceptional user experience and support.",
+        "name": "Екатерина Шадрина",
+        "testimonial": "Я получила предложение о работе в течение нескольких дней после обращения. Исключительный пользовательский опыт и поддержка",
         "rating": 4,
         "avatar": "avatar1"
     },
     {
-        "name": "Arseniy Popovskiy",
-        "testimonial": "Found my dream job within a week! The application process was smooth.",
+        "name": "Имран Байхаев",
+        "testimonial": "Я нашел работу своей мечты в течение недели! Процесс подачи заявки прошел гладко.",
         "rating": 5,
         "avatar": "avatar"
     },
     {
-        "name": "Irina Kiprina", 
-        "testimonial": "Highly efficient job portal with excellent resources. Helped me land a great position.",
+        "name": "Анна Осиповичева", 
+        "testimonial": "Высокоэффективный портал по трудоустройству с отличными ресурсами. Помог мне найти отличную должность.",
         "rating": 4,
         "avatar": "avatar2"
     }
 ]
 const footerLinks = [
-    { title: "Product", links: ["Find Job", "Find Company", "Find Employee"] },
-    { title: "Company", links: ["About Us", "Contact Us", "Privacy Policy", "Terms & Conditions"] },
-    { title: "Support", links: ["Help & Support", "Feedback", "FAQs"] }
+    { title: "Продукт", links: ["Найдите работу", "Найдите компанию", "Найдите сотрудника"] },
+    { title: "Компания", links: ["О нас", "Свяжитесь с нами", "Политика конфиденциальности", "Условия и положения"] },
+    { title: "Поддержка", links: ["Помощь и поддержка", "Обратная связь", "Вопросы и ответы"] }
 
 ]
 export { companies, jobCategory, work, testimonials, footerLinks };

@@ -32,39 +32,39 @@ const ApplyJobComp = () => {
                         <img className="h-14" src={`/Icons/Google.png`} alt="" />
                     </div>
                     <div>
-                        <div className="font-semibold txt-2xl">Software Engineer III</div>
-                        <div className="text-lg text-mine-shaft-300">Google &bull; 3 days ago &bull; 48 Applicants</div>
+                        <div className="font-semibold txt-2xl">Разработчик ПО </div>
+                        <div className="text-lg text-mine-shaft-300">Google &bull; 3 дня назад &bull; 36 Откликов</div>
                     </div> 
                 </div>
             </div>
             <Divider my="xl"/>
-            <div className="text-xl font-semibold mb-5">Submit your Application</div>
+            <div className="text-xl font-semibold mb-5">Подайте заявку</div>
             <div className="flex flex-col gap-5">
                 <div className="flex gap-10 [&>*]:w-1/2">
                 <TextInput readOnly={preview} variant={preview?"unstyled":"default"}
                 className={`${preview?"text-mine-shaft-300 font-semibold":""}`}
-                label="Full Name" withAsterisk placeholder="Enter Name" />
+                label="ФИО" withAsterisk placeholder="Введите ФИО" />
                 <TextInput readOnly={preview} variant={preview?"unstyled":"default"}
-                className={`${preview?"text-mine-shaft-300 font-semibold":""}`} label="Email" withAsterisk placeholder="Enter email" />
+                className={`${preview?"text-mine-shaft-300 font-semibold":""}`} label="Email" withAsterisk placeholder="Введите email" />
                 </div>
                 <div className="flex gap-10 [&>*]:w-1/2">
                 <NumberInput readOnly={preview} variant={preview?"unstyled":"default"}
-                className={`${preview?"text-mine-shaft-300 font-semibold":""}`} label="Phone Number" withAsterisk placeholder="Enter Phone Number"
+                className={`${preview?"text-mine-shaft-300 font-semibold":""}`} label="номер телефона" withAsterisk placeholder="Введите номер телефона"
                  hideControls min={0} max={9999999999} clampBehavior="strict" />
                 <TextInput readOnly={preview} variant={preview?"unstyled":"default"}
-                className={`${preview?"text-mine-shaft-300 font-semibold":""}`} label="Personal Website" withAsterisk placeholder="Enter URL" />
+                className={`${preview?"text-mine-shaft-300 font-semibold":""}`} label="Персональный сайт" withAsterisk placeholder="Введите URL" />
                 </div>
                 <FileInput readOnly={preview} variant={preview?"unstyled":"default"}
-                className={`${preview?"text-mine-shaft-300 font-semibold":""}`} withAsterisk leftSection={<IconPaperclip stroke={1.5}/>} label="Attach your CV"
-                 placeholder="Your CV" leftSectionPointerEvents="none"/>
+                className={`${preview?"text-mine-shaft-300 font-semibold":""}`} withAsterisk leftSection={<IconPaperclip stroke={1.5}/>} label="Прикрепите ваше резюме"
+                 placeholder="Ваше резюме" leftSectionPointerEvents="none"/>
                  <Textarea readOnly={preview} variant={preview?"unstyled":"default"}
-                className={`${preview?"text-mine-shaft-300 font-semibold":""}`} withAsterisk placeholder="Type something about yourself..."
-                 label="Cover Letter" autosize minRows={4}/>
-                 {!preview && <Button onClick={handlePreview} color="bright-sun.4" variant="light">Preview</Button>}
+                className={`${preview?"text-mine-shaft-300 font-semibold":""}`} withAsterisk placeholder="Напишите немного о себе..."
+                 label="Напишите о себе" autosize minRows={4}/>
+                 {!preview && <Button onClick={handlePreview} color="bright-sun.4" variant="light">Превью</Button>}
                  {
                     preview && <div className="flex gap-10 [&>*]:w-1/2">
-                        <Button fullWidth onClick={handlePreview} color="bright-sun.4" variant="outline">Edit</Button>
-                        <Button fullWidth onClick={handleSubmit} color="bright-sun.4" variant="light">Submit</Button>
+                        <Button fullWidth onClick={handlePreview} color="bright-sun.4" variant="outline">Редактировать</Button>
+                        <Button fullWidth onClick={handleSubmit} color="bright-sun.4" variant="light">Подтвердить</Button>
                     </div>
                  }
             </div>
@@ -72,8 +72,8 @@ const ApplyJobComp = () => {
     <Notification className={`!border-bright-sun-400 -translate-y-20 !fixed top-0 left-[35%] z-[1001]
      transition duration-300 ease-in-out ${submit?"translate-y-0":"-translate-y-20"}`} 
      icon={<IconCheck style={{ width: rem(20), height: rem(20) }} />}
-     color="teal" withBorder title="Application Submitted" mt="md" withCloseButton={false}>
-        Redirecting to Find Jobs in {sec} second...
+     color="teal" withBorder title="Заявка подана" mt="md" withCloseButton={false}>
+        Перенаправление на Найти работу через {sec} секунд...
     </Notification>
     </>
 }

@@ -38,14 +38,14 @@ const ProfileMenu = () => {
       <Menu.Dropdown onChange={() => setOpened(true)}>
         <Link to="/profile">
             <Menu.Item leftSection={<IconUserCircle style={{ width: rem(14), height: rem(14) }} />}>
-            Profile
+            Профиль
             </Menu.Item>
         </Link>
         <Menu.Item leftSection={<IconMessageCircle style={{ width: rem(14), height: rem(14) }} />}>
-          Messages
+          Сообщения
         </Menu.Item>
         <Menu.Item leftSection={<IconFileText style={{ width: rem(14), height: rem(14) }} />}>
-          Resume
+          Резюме
         </Menu.Item>
         <Menu.Item leftSection={<IconMoon style={{ width: rem(14), height: rem(14) }} />} 
         rightSection={
@@ -61,7 +61,7 @@ const ProfileMenu = () => {
                 color="cyan"
               />} />
         }>
-          Dark Mode
+          Темный режим
         </Menu.Item>
 
         <Menu.Divider />
@@ -69,7 +69,7 @@ const ProfileMenu = () => {
           color="red"
           leftSection={<IconLogout style={{ width: rem(14), height: rem(14) }} />}
         >
-          Logout
+          Выйти
         </Menu.Item>
       </Menu.Dropdown>
     </Menu>

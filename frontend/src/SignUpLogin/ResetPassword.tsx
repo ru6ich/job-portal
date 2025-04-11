@@ -29,7 +29,7 @@ const ResetPassword = (props:any) => {
         setOtpSending(true);
         sendOtp(email).then((res)=>{
             console.log(res);
-            successNotification("OTP sent succsessfully", "Enter OTP to reset.");
+            successNotification("Код отправлен успешно", "Введите код для сброса пароля.");
             setOtpSent(true);
             setOtpSending(false);
             setResendLoader(true);
@@ -37,7 +37,7 @@ const ResetPassword = (props:any) => {
         }).catch((err)=>{
             console.log(err);
             setOtpSending(false);
-            errorNotification("OTP Sending Failed", err.response.data.errorMessage);
+            errorNotification("Ошибка отправки кода", err.response.data.errorMessage);
         })
 
     }
@@ -45,11 +45,11 @@ const ResetPassword = (props:any) => {
     const handleVerifyOtp = (otp:string) => {
         verifyOtp(email, otp).then((res)=>{
             console.log(res);
-            successNotification("OTP Verified", "Enter new password.");
+            successNotification("Код верифицирован", "Введите новый пароль.");
             setVerified(true);
         }).catch((err)=>{
             console.log(err);
-            errorNotification("OTP verification failed", err.response.data.errorMessage);
+            errorNotification("Ошибка верификации кода", err.response.data.errorMessage);
         })
     }
 
@@ -69,22 +69,22 @@ const ResetPassword = (props:any) => {
     const handleResetPassword = () =>{
         changePass(email, password).then((res)=>{
             console.log(res)
-            successNotification("Password changed", "Login with new password.")
+            successNotification("Пароль изменен", "Войдите с новым паролем.")
             props.close();
         }).catch((err)=>{
             console.log(err);
-            errorNotification("Password Reset Failed", err.response.data.errorMessage);
+            errorNotification("Ошибка сброса пароля", err.response.data.errorMessage);
         })
     }
 
-    return <Modal opened={props.opened} onClose={props.close} title="Reset Password">
+    return <Modal opened={props.opened} onClose={props.close} title="Сбросить пароль">
     <div className="flex flex-col gap-6">
         <TextInput value={email} name="email" onChange={(e)=>setEmail(e.target.value)}
          withAsterisk leftSection={<IconAt size={16} />} label="Email"
-        placeholder="Your email"
+        placeholder="Ваш email"
         rightSection={<Button loading={otpSending && !otpSent} size="xs" className="mr-1" 
             onClick={handleSendOtp} autoContrast disabled={email==="" || otpSent} 
-            variant="filled">Login</Button>}
+            variant="filled">Отправить</Button>}
         rightSectionWidth="xl"
         />
         {otpSent && <PinInput onComplete={handleVerifyOtp} length={6} className="mx-auto" size="md" gap="lg" type="number"/>}
@@ -92,19 +92,19 @@ const ResetPassword = (props:any) => {
         <div className="flex gap-2">
             <Button fullWidth color="brightSun.4" loading={otpSending}  
             onClick={resendOtp} autoContrast 
-            variant="light">{resendLoader?seconds:"Resend"}</Button>
+            variant="light">{resendLoader?seconds:"Отправить заново"}</Button>
 
             <Button fullWidth onClick={changeEmail} autoContrast 
-            variant="filled">Change Email</Button>
+            variant="filled">Поменять Email</Button>
         </div>}
         {verified && <PasswordInput value={password} error={passErr} name="password"
          onChange={(e)=>{setPassword(e.target.value);
             setPassErr(signUpValidation(password, e.target.value))}} 
             withAsterisk leftSection={<IconLock size={16}/>}
-            label="Password" placeholder="Password" />}
+            label="Пароль" placeholder="Пароль" />}
 
         {verified && <Button onClick={handleResetPassword} autoContrast
-        variant="filled">Change Password</Button>}  
+        variant="filled">Поменять пароль</Button>}  
     </div>
   </Modal>
 }

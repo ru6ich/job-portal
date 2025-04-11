@@ -10,7 +10,7 @@ const TalentProfilePage = () => {
         <div className='min-h-[90vh] bg-mine-shaft-950 font-["poppins"] p-4'>
             <Link className="my-4 inline-block" to="/find-talent">
                     <Button leftSection={<IconArrowLeft size={20}/>} color="bright-sun.4" variant="light"
-                    >Back</Button>
+                    >Назад</Button>
             </Link>
             <Divider size="xs"/>
             <div className="flex gap-5">

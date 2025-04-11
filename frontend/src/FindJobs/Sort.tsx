@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { ActionIcon, Combobox, useCombobox } from '@mantine/core';
 import { IconAdjustments } from '@tabler/icons-react';
 
-const opt = ['Relevance', 'Most Recent', 'Salary(Low to High)', 'Salary(High to Love)'];
+const opt = ['Актуальность', 'Последние', 'Зарплата(от низкой до высокой)', 'Зарплата(от высокой до низкой)'];
 
 const Sort = () => {
-  const [selectedItem, setSelectedItem] = useState<string | null>('Relevance');
+  const [selectedItem, setSelectedItem] = useState<string | null>('Актуальность');
   const combobox = useCombobox({
     onDropdownClose: () => combobox.resetSelectedOption(),
   });

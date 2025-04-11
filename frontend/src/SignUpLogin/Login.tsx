@@ -40,8 +40,8 @@ const Login = () => {
             loginUser(data).then((res)=>{
                 console.log(res);
                 notifications.show({
-                    title: 'Login Successful',
-                    message: 'Redirecting to home page...',
+                    title: 'Успешный вход',
+                    message: 'Перенаправление на домашнюю страницу...',
                     withCloseButton: true,
                     icon: <IconCheck style={{width:"90%", height:"90%"}}/>,
                     color: "teal",
@@ -75,15 +75,15 @@ const Login = () => {
     overlayProps={{ radius: 'sm', blur: 2 }}
     loaderProps={{ color: 'bright-sun.4', type: 'bars' }}
   /><div className="w-1/2 px-20 flex flex-col justify-center gap-3">
-    <div className="text-2xl font-semibold">Login</div>
+    <div className="text-2xl font-semibold">Войти</div>
         <TextInput value={data.email} error={formError.email} name="email" onChange={handleCHange} withAsterisk leftSection={<IconAt style={{ width: rem(16), height: rem(16) }} />}
-            label="Email" placeholder="Your email"/>
+            label="Email" placeholder="Ваш email"/>
         <PasswordInput value={data.password} error={formError.password} name="password" onChange={handleCHange} withAsterisk leftSection={<IconLock style={{ width: rem(18), height: rem(18) }} stroke={1.5} />}
-            label="Password" placeholder="Password" />
-        <Button loading={loading} onClick={handleSubmit} autoContrast variant="filled">Login</Button>
-        <div className="mx-auto">Don't have an account? <span onClick={() => {navigate("/signup"); setFormError(form); setData(form)}} className="text-bright-sun-400
-            hover:underline cursor-pointer">SignUp</span></div>
-            <div onClick={open} className="text-bright-sun-400 hover:underline cursor-pointer text-center">Forget Password?</div>
+            label="Пароль" placeholder="Пароль" />
+        <Button loading={loading} onClick={handleSubmit} autoContrast variant="filled">Войти</Button>
+        <div className="mx-auto">Нет аккаунта? <span onClick={() => {navigate("/signup"); setFormError(form); setData(form)}} className="text-bright-sun-400
+            hover:underline cursor-pointer">Зарегистрироваться</span></div>
+            <div onClick={open} className="text-bright-sun-400 hover:underline cursor-pointer text-center">Забыли пароль?</div>
     </div>
     <ResetPassword opened={opened} close={close}/>
     </>

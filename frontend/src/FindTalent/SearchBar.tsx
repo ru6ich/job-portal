@@ -10,7 +10,7 @@ const SearchBar = () => {
         <div className="flex items-center">
             <div className="text-bright-sun-400 bg-mine-shaft-900 rounded-full p-1 mr-2">
                 <IconUserCircle size={20}/></div>
-                <Input className="[&_input]:!placeholder-mine-shaft-300" variant="unstyled" placeholder="Talent Name" />
+                <Input className="[&_input]:!placeholder-mine-shaft-300" variant="unstyled" placeholder="ФИО Кандидата" />
         </div>
         {
             searchFields.map((item, index) => <> <div key={index} className="w-1/5">
@@ -21,8 +21,8 @@ const SearchBar = () => {
         }
         <div className="w-1/5 [&_.mantine-Slider-label]:!translate-y-10">
             <div className="flex text-sm justify-between">
-                <div>Salary</div>
-                <div>&#8381;{value[0]} RUB - &#8381;{value[1]} RUB</div>
+                <div>Зарплата</div>
+                <div>&#8381;{value[0]} тыс. руб. - &#8381;{value[1]} тыс. руб.</div>
             </div>
         <RangeSlider color="bright-sun.4" size="xs" value={value} labelTransitionProps={{
           transition: 'skew-down',

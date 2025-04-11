@@ -12,7 +12,7 @@ const JobCard = (props:any) => {
                     </div>
                     <div>
                         <div className="font-semibold">{props.jobTitle}</div>
-                        <div className="text-xs text-mine-shaft-300">{props.company} &#x2022; {props.applicants} Applicants</div>
+                        <div className="text-xs text-mine-shaft-300">{props.company} &#x2022; {props.applicants} Кандидаты</div>
                     </div> 
                 </div>
                 <IconBookmark className="text-mine-shaft-300 cursor-pointer"/>
@@ -32,7 +32,7 @@ const JobCard = (props:any) => {
                         &#8381;{props.package}
                     </div>
                     <div className="flex gap-1 text-xs text-mine-shaft-400 items-center">
-                        <IconClockHour3 className="h-5 w-5" stroke={1.5}/> {props.postedDaysAgo} days ago
+                        <IconClockHour3 className="h-5 w-5" stroke={1.5}/> {props.postedDaysAgo} дней назад
                     </div>
                 </div>
         </Link>

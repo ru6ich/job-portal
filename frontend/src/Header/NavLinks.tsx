@@ -2,12 +2,12 @@ import { Link, useLocation } from "react-router-dom";
 
 const NavLinks = () => {
     const links = [
-        {name:"Find Jobs", url:"find-jobs"},
-        {name:"Find Talent", url:"find-talent"},
-        {name:"Post Job", url:"post-job"},
-        {name:"Posted Jobs", url:"posted-job"},
-        {name:"Job History", url:"job-history"},
-        {name:"SignUp", url:"signup"},
+        {name:"Найти работу", url:"find-jobs"},
+        {name:"Найти соискателей", url:"find-talent"},
+        {name:"Выложить вакансию", url:"post-job"},
+        {name:"Вакансии", url:"posted-job"},
+        {name:"Мои вакансии", url:"job-history"},
+        {name:"Регистрация", url:"signup"},
     ]
     const location = useLocation();
     return <div className='flex gap-5 text-mine-shaft-300 h-full items-center'>

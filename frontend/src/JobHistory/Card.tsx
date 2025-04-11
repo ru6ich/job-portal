@@ -12,7 +12,7 @@ const Card = (props:any) => {
                     </div>
                     <div>
                         <div className="font-semibold">{props.jobTitle}</div>
-                        <div className="text-xs text-mine-shaft-300">{props.company} &#x2022; {props.applicants} Applicants</div>
+                        <div className="text-xs text-mine-shaft-300">{props.company} &#x2022; {props.applicants} Кандидаты</div>
                     </div> 
                 </div>
                 {props.saved?<IconBookmarkFilled className="text-bright-sun-400 cursor-pointer" stroke={1.5}/>
@@ -36,20 +36,20 @@ const Card = (props:any) => {
                     </div>
                     <div className="flex gap-1 text-xs text-mine-shaft-400 items-center">
                         <IconClockHour3 className="h-5 w-5" stroke={1.5}/>
-                         {props.applied || props.interviewing?"Applied":props.offered?"Interviewed":"Posted"} {props.postedDaysAgo} days ago
+                         {props.applied || props.interviewing?"Принято":props.offered?"Собеседование было":"Выложено"} {props.postedDaysAgo} дней назад
                     </div>
                 </div>
                 {(props.offered || props.interviewing) && <Divider size="xs" color="mineShaft.7" />}
                 {
                     props.offered && <div className="flex gap-2">
-                        <Button color="bright-sun.4" variant="outline" fullWidth>Accept</Button>
-                        <Button color="bright-sun.4" variant="light" fullWidth>Reject</Button>
+                        <Button color="bright-sun.4" variant="outline" fullWidth>Принять</Button>
+                        <Button color="bright-sun.4" variant="light" fullWidth>Отклонить</Button>
                     </div>
                 }
                 {
                     props.interviewing && <div className="flex gap-1 text-sm items-center">
                         <IconCalendarMonth className="text-bright-sun-400 w-5 h-5" stroke={1.5}/>
-                        Sun, 25 August &bull; <span className="text-mine-shaft-400">10:00 AM</span>
+                        Понедельник, 25 Августа &bull; <span className="text-mine-shaft-400">10:00</span>
                     </div>
                 }
         </Link>

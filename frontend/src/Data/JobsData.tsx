@@ -1,100 +1,100 @@
 import { IconBriefcase, IconMapPin, IconRecharging, IconSearch } from "@tabler/icons-react";
 
 const dropdownData = [
-    { title: "Job Title", icon: IconSearch, options: ['Designer', 'Developer', 'Product Manager', 'Marketing Specialist', 'Data Analyst', 'Sales Executive', 'Content Writer', 'Customer Support'] },
-    { title: "Location", icon: IconMapPin, options: ['Delhi', 'New York', 'San Francisco', 'London', 'Berlin', 'Tokyo', 'Sydney', 'Toronto'] },
-    { title: "Experience", icon: IconBriefcase, options: ['Entry Level', 'Intermediate', 'Expert'] },
-    { title: "Job Type", icon: IconRecharging, options: ['Full Time', 'Part Time', 'Contract', 'Freelance', 'Internship'] }
+    { title: "Вакансия", icon: IconSearch, options: ['Designer', 'Developer', 'Product Manager', 'Marketing Specialist', 'Data Analyst', 'Sales Executive', 'Content Writer', 'Customer Support'] },
+    { title: "Локация", icon: IconMapPin, options: ['Delhi', 'New York', 'San Francisco', 'London', 'Berlin', 'Tokyo', 'Sydney', 'Toronto'] },
+    { title: "Опыт", icon: IconBriefcase, options: ['Entry Level', 'Intermediate', 'Expert'] },
+    { title: "Тип работы", icon: IconRecharging, options: ['Full Time', 'Part Time', 'Contract', 'Freelance', 'Internship'] }
 ];
 
 const jobList = [
     {
-      jobTitle: "Product Designer",
+      jobTitle: "Дизайнер продукта",
       company: "Meta",
       applicants: 25,
-      experience: "Entry Level",
-      jobType: "Full-Time",
-      location: "New York",
-      package: "320k RUB",
+      experience: "Начальный уровень",
+      jobType: "Фуллтайм",
+      location: "Самара",
+      package: "250 тыс. руб.",
       postedDaysAgo: 12,
-      description: "Meta is seeking a Product Designer to join our team. You'll be working on designing user-centric interfaces for our blockchain wallet platform. This is an excellent opportunity for entry-level designers to grow their skills in a dynamic environment."
+      description: "Компания Meta ищет дизайнера продуктов в нашу команду. Вы будете работать над созданием ориентированных на пользователя интерфейсов для нашей платформы блокчейн-кошельков. Это отличная возможность для дизайнеров начального уровня повысить свою квалификацию в динамичной среде.."
     },
     {
-      jobTitle: "Sr. UX Designer",
+      jobTitle: "UX Дизайнер",
       company: "Netflix",
       applicants: 14,
-      experience: "Expert",
-      jobType: "Part-Time",
-      location: "San Francisco",
-      package: "400k RUB",
+      experience: "Эксперт",
+      jobType: "Частичная занятость",
+      location: "Москва",
+      package: "320 тыс.руб.",
       postedDaysAgo: 5,
-      description: "Netflix is looking for a Sr. UX Designer to enhance our user experience on streaming platforms. Ideal candidates will have extensive experience in user research and interaction design, helping us to deliver engaging content to our global audience."
+      description: "Компания Netflix ищет старшего UX-дизайнера для улучшения пользовательского опыта на платформах потокового вещания. Идеальные кандидаты будут обладать обширным опытом в области исследования пользователей и проектирования взаимодействия, помогая нам предоставлять увлекательный контент для нашей глобальной аудитории."
     },
     {
-      jobTitle: "Product Designer",
+      jobTitle: "Дизайнер продукта",
       company: "Microsoft",
       applicants: 58,
-      experience: "Intermediate",
-      jobType: "Full-Time",
-      location: "Remote",
-      package: "350k RUB",
+      experience: "Уверенный",
+      jobType: "Фуллтайм",
+      location: "Удаленная работа",
+      package: "350 тыс. руб.",
       postedDaysAgo: 4,
-      description: "Join Microsoft as a Product Designer and contribute to our new Lightspeed LA studio. We're looking for designers who can create intuitive and compelling gaming experiences. This is a remote position, offering flexibility and the opportunity to work with a leading technology company."
+      description: "Присоединяйтесь к Microsoft в качестве дизайнера продуктов и участвуйте в работе нашей новой студии Lightspeed LA. Мы ищем дизайнеров, способных создавать интуитивно понятные и убедительные игровые решения. Это удаленная должность, обеспечивающая гибкость и возможность работать с ведущей технологической компанией."
     },
     {
-      jobTitle: "Product Designer",
+      jobTitle: "Дизайнер продукта",
       company: "Adobe",
       applicants: 23,
-      experience: "Expert",
-      jobType: "Part-Time",
-      location: "Toronto",
-      package: "330k RUB",
+      experience: "Эксперт",
+      jobType: "Частичная занятость",
+      location: "Москва",
+      package: "330 тыс. руб.",
       postedDaysAgo: 22,
-      description: "Adobe is seeking a part-time Product Designer to help us enhance our user experience. You will work closely with our team to design features that make our platform more engaging and user-friendly. This role is perfect for experienced designers looking for flexible work hours."
+      description: "Компания Adobe ищет дизайнера продуктов на неполный рабочий день, чтобы помочь нам улучшить пользовательский опыт. Вы будете работать в тесном сотрудничестве с нашей командой над разработкой функций, которые сделают нашу платформу более увлекательной и удобной для пользователей. Эта роль идеально подходит для опытных дизайнеров, которым нужен гибкий график работы."
     },
     {
-      jobTitle: "Backend Developer",
+      jobTitle: "Бэкенд разработчик",
       company: "Google",
       applicants: 21,
-      experience: "Entry Level",
-      jobType: "Full-Time",
-      location: "Bangalore",
-      package: "380k RUB",
+      experience: "Начальный уровень",
+      jobType: "Фуллтайм",
+      location: "Санкт-Петербург",
+      package: "380 тыс. руб.",
       postedDaysAgo: 8,
-      description: "Google is hiring a Backend Developer to join our team in Bangalore. You'll be responsible for developing scalable backend systems that power our services. This role requires strong problem-solving skills and experience with modern backend technologies."
+      description: "Компания Google приглашает на работу разработчика бэкенда, который присоединится к нашей команде в Санкт-Петербурге. Вы будете отвечать за разработку масштабируемых бэкенд-систем, которые обеспечивают работу наших сервисов. Эта роль требует сильных навыков решения проблем и опыта работы с современными технологиями бэкенда."
     },
     {
-      jobTitle: "SMM Manager",
+      jobTitle: "SMM Менеджер",
       company: "Spotify",
       applicants: 73,
-      experience: "Intermediate",
-      jobType: "Full-Time",
-      location: "Delhi",
-      package: "340k RUB",
+      experience: "Уверенный",
+      jobType: "Фуллтайм",
+      location: "Москва",
+      package: "340 тыс. руб.",
       postedDaysAgo: 8,
-      description: "Spotify is looking for an SMM Manager to lead our social media marketing efforts in Delhi. You will create and manage campaigns to promote our music streaming service, engage with our audience, and drive growth. This role is ideal for creative marketers with a passion for music."
+      description: "Spotify ищет SMM-менеджера для руководства маркетинговой деятельностью в социальных сетях в Дели. Вы будете создавать и управлять кампаниями по продвижению нашего сервиса потокового вещания музыки, взаимодействовать с аудиторией и стимулировать рост. Эта роль идеально подходит для креативных маркетологов, увлеченных музыкой."
     },
     {
-      jobTitle: "Frontend Developer",
+      jobTitle: "Фронтенд Разработчик",
       company: "Amazon",
       applicants: 50,
-      experience: "Intermediate",
-      jobType: "Full-Time",
-      location: "Seattle",
-      package: "360k RUB",
+      experience: "Уверенный",
+      jobType: "Фуллтайм",
+      location: "Самара",
+      package: "360 тыс. руб.",
       postedDaysAgo: 10,
-      description: "Amazon is looking for a Frontend Developer to build and maintain our customer-facing applications. You will work with a dynamic team to create seamless and responsive web applications."
+      description: "Компания Amazon ищет разработчика фронтенда для создания и поддержки наших приложений, ориентированных на клиентов. Вы будете работать в динамичной команде над созданием удобных и отзывчивых веб-приложений."
     },
     {
-      jobTitle: "iOS Developer",
+      jobTitle: "iOS Разработчик",
       company: "Apple",
       applicants: 30,
-      experience: "Expert",
-      jobType: "Full-Time",
-      location: "Cupertino",
-      package: "420k RUB",
+      experience: "Эксперт",
+      jobType: "Фуллтайм",
+      location: "Москва",
+      package: "420 тыс. руб.",
       postedDaysAgo: 7,
-      description: "Apple is seeking an iOS Developer to join our team in Cupertino. You will work on developing cutting-edge applications for iOS devices, ensuring high performance and an exceptional user experience."
+      description: "Компания Apple ищет iOS-разработчика в нашу команду в Москве. Вы будете заниматься разработкой передовых приложений для устройств на базе iOS, обеспечивая высокую производительность и исключительный пользовательский опыт."
     }
   ];
 

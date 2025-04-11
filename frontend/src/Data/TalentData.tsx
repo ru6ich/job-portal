@@ -1,138 +1,139 @@
 import { IconBriefcase, IconMapPin, IconRecharging, IconSearch } from "@tabler/icons-react";
 
 const searchFields=[
-    { title: "Job Title", icon: IconSearch, options: ['Designer', 'Developer', 'Product Manager', 'Marketing Specialist', 'Data Analyst', 'Sales Executive', 'Content Writer', 'Customer Support'] },
-    { title: "Location", icon: IconMapPin, options: ['Delhi', 'New York', 'San Francisco', 'London', 'Berlin', 'Tokyo', 'Sydney', 'Toronto'] },
-    { title: "Skills", icon: IconRecharging, options: ["HTML","CSS","JavaScript","React","Angular","Node.js","Python","Java","Ruby","PHP","SQL","MongoDB","PostgreSQL","Git","API Development","Testing and Debugging","Agile Methodologies","DevOps","AWS","Azure","Google Cloud"] },
+    { title: "Вакансия", icon: IconSearch, options: ['Дизайнер', 'Разработчик', 'Продакт менеджер', 'Маркетолог', 'Big Data Специалист', 'Менеджер по продажам', 'Автор контента', 'Поддержка пользователей'] },
+    { title: "Локация", icon: IconMapPin, options: ['Google', 'Microsoft', 'Meta', 'Netflix', 'Adobe', 'Facebook', 'Amazon', 'Apple', 'Spotify'] },
+    { title: "Навыки", icon: IconRecharging, options: ["HTML","CSS","JavaScript","React","Angular","Node.js","Python","Java","Ruby","PHP","SQL","MongoDB","PostgreSQL","Git","API Development","Testing and Debugging","Agile Methodologies","DevOps","AWS","Azure","Google Cloud"] },
 ]
 const talents = [
     {
-      name: "Rustam Rakhmatullov",
-      role: "Software Engineer",
+      name: "Рустам Рахматуллов",
+      role: "Разработчик ПО",
       company: "Google",
       topSkills: ["React", "SpringBoot", "MongoDB"],
-      about: "As a Software Engineer at Google, I specialize in building scalable and high-performance applications. My expertise lies in integrating front-end and back-end technologies to deliver seamless user experiences. With a strong foundation in React and SpringBoot, and a focus on MongoDB for database solutions, I am passionate about leveraging the latest technologies to solve complex problems and drive innovation. My goal is to create impactful software that enhances productivity and meets user needs effectively.",
-      expectedCtc: "₽100k - 150k RUB",
-      location: "Samara, Russia",
+      about: "В качестве инженера-программиста в Google я специализируюсь на создании масштабируемых и высокопроизводительных приложений. Мой опыт заключается в интеграции фронтенд- и бэкенд-технологий для обеспечения бесшовного пользовательского опыта. Имея прочную основу в React и SpringBoot, а также ориентируясь на MongoDB для решений в области баз данных, я увлечен использованием новейших технологий для решения сложных проблем и стимулирования инноваций. Моя цель - создавать эффективное программное обеспечение, которое повышает производительность и эффективно удовлетворяет потребности пользователей.",
+      expectedCtc: "₽150 тыс. руб. - ₽200 тыс. руб.",
+      location: "Самара, Россия",
       image:"avatar"
     },
     {
-      name: "Arina Moiseeva",
-      role: "Frontend Developer",
-      company: "Facebook",
+      name: "Арина Моисеева",
+      role: "Фронтенд Разработчик",
+      company: "Вконтакте",
       topSkills: ["HTML", "CSS", "JavaScript"],
-      about: "As a Frontend Developer at Facebook, I focus on creating visually appealing and highly interactive web applications. My expertise in HTML, CSS, and JavaScript allows me to build responsive and user-friendly interfaces that enhance user experience. I am dedicated to staying current with the latest trends and best practices in web development to ensure optimal performance and accessibility. I thrive in collaborative environments where I can contribute to innovative projects and deliver solutions that meet user expectations.",
-      expectedCtc: "₽80k - 120k RUB",
-      location: "San Francisco, United States",
+      about: "В качестве фронтенд-разработчика в компании «Вконтакте» я занимаюсь созданием визуально привлекательных и высокоинтерактивных веб-приложений. Мои знания HTML, CSS и JavaScript позволяют мне создавать отзывчивые и удобные интерфейсы, которые повышают удобство работы пользователей. Я стремлюсь быть в курсе последних тенденций и лучших практик в области веб-разработки, чтобы обеспечить оптимальную производительность и доступность. Мне нравится работать в коллективной среде, где я могу внести свой вклад в инновационные проекты и предоставить решения, отвечающие ожиданиям пользователей.",
+      expectedCtc: "₽80 тыс. руб. - ₽120 тыс. руб.",
+      location: "Самара, Россия",
       image:"avatar1"
     },
     {
-      name: "Imran Baihaev",
-      role: "Backend Developer",
-      company: "Amazon",
+      name: "Имран Байхаев",
+      role: "Backend Разработчик",
+      company: "Вкусно и Точка",
       topSkills: ["Node.js", "Express", "MySQL"],
-      about: "As a Backend Developer at Amazon, I specialize in server-side development and database management. My skills in Node.js and Express allow me to build robust and scalable APIs, while my experience with MySQL ensures efficient data handling and storage. I am passionate about optimizing backend processes to support high-traffic applications and improve system performance. My approach to development emphasizes reliability, security, and the ability to adapt to evolving technological demands.",
-      expectedCtc: "₽90k - 130k RUB",
-      location: "Seattle, United States",
+      about: "В качестве Backend-разработчика в компании «Вкусно и Точка» я специализируюсь на разработке серверной части и управлении базами данных. Мои навыки работы с Node.js и Express позволяют мне создавать надежные и масштабируемые API, а опыт работы с MySQL обеспечивает эффективную обработку и хранение данных. Я увлечен оптимизацией бэкенд-процессов для поддержки приложений с высоким трафиком и повышения производительности системы. В моем подходе к разработке особое внимание уделяется надежности, безопасности и способности адаптироваться к меняющимся технологическим требованиям.",
+      expectedCtc: "₽150 тыс. руб. - ₽200 тыс. руб.",
+      location: "Грозный, Чеченская республика, Росссия",
       image:"avatar"
     },
     {
-        name: "Ekaterina Shadrina",
-        role: "UX/UI Designer",
+        name: "Екатерина Шадрина",
+        role: "UX/UI Дизайнер",
         company: "Adobe",
         topSkills: ["Figma", "Sketch", "InVision"],
-        about: "As a UX/UI Designer at Adobe, I am dedicated to crafting visually compelling and user-centric designs. My expertise in Figma, Sketch, and InVision allows me to create intuitive interfaces that enhance user experience across digital platforms. I am passionate about translating complex ideas into clean and effective designs that align with user needs and business goals. My design process involves thorough research, user testing, and iterative design to ensure the highest quality and user satisfaction.",
-        expectedCtc: "₽110k - 140k RUB",
-        location: "Los Angeles, United States",
+        about: "В качестве UX/UI-дизайнера в Adobe я занимаюсь разработкой визуально привлекательных и ориентированных на пользователя дизайнов. Мой опыт работы в Figma, Sketch и InVision позволяет мне создавать интуитивно понятные интерфейсы, которые улучшают пользовательский опыт на всех цифровых платформах. Я с энтузиазмом воплощаю сложные идеи в чистые и эффективные проекты, которые соответствуют потребностям пользователей и целям бизнеса. Мой процесс проектирования включает в себя тщательные исследования, пользовательское тестирование и итеративный дизайн, чтобы обеспечить высочайшее качество и удовлетворенность пользователей.",
+        expectedCtc: "₽110 тыс. руб. - ₽140 тыс. руб.",
+        location: "Санкт-Петербург, Россия",
         image:"avatar2"
       },
     {
-      name: "Rinat Karimov",
+      name: "Ринат Каримов",
       role: "Full Stack Developer",
       company: "Microsoft",
       topSkills: ["Python", "Django", "React"],
-      about: "As a Full Stack Developer at Microsoft, I work on developing end-to-end solutions for web applications. My expertise in Python and Django for backend development, combined with React for frontend, allows me to create cohesive and high-performing applications. I am adept at managing the entire development lifecycle, from designing intuitive user interfaces to implementing robust server-side logic. My goal is to deliver comprehensive solutions that meet both user needs and business objectives.",
-      expectedCtc: "₽150k - 200k RUB",
-      location: "Redmond, United States",
+      about: " В качестве фуллстек разработчика в Microsoft я занимаюсь разработкой комплексных решений для веб-приложений. Мои знания Python и Django для разработки бэкенда в сочетании с React для фронтенда позволяют мне создавать целостные и высокопроизводительные приложения. Я умею управлять всем жизненным циклом разработки, от проектирования интуитивно понятных пользовательских интерфейсов до реализации надежной логики на стороне сервера. Моя цель - создавать комплексные решения, отвечающие как потребностям пользователей, так и бизнес-целям.",
+      expectedCtc: "₽150 тыс. руб. - ₽200 тыс. руб.",
+      location: "Самара, Россия",
       image:"avatar"
     },
     {
-        name: "Arina Moric",
-        role: "DevOps Engineer",
-        company: "Netflix",
+        name: "Александр Душкин",
+        role: "DevOps Инженер",
+        company: "T-Банк",
         topSkills: ["Docker", "Kubernetes", "AWS"],
-        about: "As a DevOps Engineer at Netflix, I focus on automating infrastructure and optimizing deployment processes to support scalable applications. My expertise in Docker, Kubernetes, and AWS enables me to manage and streamline complex cloud environments efficiently. I am dedicated to improving operational efficiency and reliability through continuous integration and delivery practices. My role involves collaborating with development teams to ensure seamless deployment and maintenance of applications, enhancing overall system performance and resilience.",
-        expectedCtc: "₽150k - 200k RUB",
-        location: "Los Gatos, United States",
+        about: "В качестве инженера DevOps в компании T-Банк я занимаюсь автоматизацией инфраструктуры и оптимизацией процессов развертывания для поддержки масштабируемых приложений. Мой опыт работы с Docker, Kubernetes и AWS позволяет мне эффективно управлять сложными облачными средами и оптимизировать их работу. Я стремлюсь повысить эффективность и надежность работы с помощью методов непрерывной интеграции и доставки. Моя роль заключается в сотрудничестве с командами разработчиков для обеспечения бесперебойного развертывания и обслуживания приложений, повышения общей производительности и отказоустойчивости системы.",
+        expectedCtc: "₽110 тыс. руб. - ₽140 тыс. руб.",
+        location: "Самара, Россия",
         image:"avatar1"
       },
     {
-      name: "Dmytriy Mamikin",
+      name: "Дмитрий Мамыкин",
       role: "Data Scientist",
-      company: "IBM",
+      company: "SberTech",
       topSkills: ["Python", "R", "Machine Learning"],
-      about: "As a Data Scientist at IBM, I leverage my skills in Python, R, and machine learning to analyze complex datasets and generate actionable insights. My work involves building predictive models and data-driven solutions to support strategic decision-making and business growth. I am committed to exploring innovative techniques and methodologies to enhance data analysis and drive meaningful outcomes. My goal is to turn data into valuable information that can help organizations solve problems and seize opportunities.",
-      expectedCtc: "₽250k - 300k RUB",
-      location: "Austin, United States",
+      about: "В качестве специалиста по анализу данных в SberTech я использую свои навыки в Python, R и машинном обучении для анализа сложных массивов данных и получения действенных выводов. Моя работа связана с построением прогнозных моделей и решений на основе данных для поддержки принятия стратегических решений и роста бизнеса. Я стремлюсь к изучению инновационных методов и методик для улучшения анализа данных и получения значимых результатов. Моя цель - превратить данные в ценную информацию, которая поможет организациям решать проблемы и использовать возможности.",
+      expectedCtc: "₽110 тыс. руб. - ₽140 тыс. руб.",
+      location: "Самара, Россия",
       image:"avatar"
     },    
     {
-        name: "Anna Ocipovicheva",
-        role: "Mobile App Developer",
+        name: "Анна Осиповичева",
+        role: "Разработчик мобильных приложений",
         company: "Apple",
         topSkills: ["Swift", "iOS", "Xcode"],
-        about: "As a Mobile App Developer at Apple, I specialize in creating intuitive and high-performance iOS applications. With expertise in Swift and Xcode, I design and develop apps that offer seamless user experiences and adhere to the highest standards of quality and performance. My role involves collaborating with cross-functional teams to deliver innovative features and ensure smooth integration with Apple's ecosystem. I am passionate about leveraging the latest technologies to build apps that delight users and drive engagement.",
-        expectedCtc: "₽200k - 250k RUB",
-        location: "Cupertino, United States",
+        about: "Как разработчик мобильных приложений в Apple, я специализируюсь на создании интуитивно понятных и высокопроизводительных приложений для iOS. Обладая опытом работы в Swift и Xcode, я проектирую и разрабатываю приложения, которые обеспечивают беспрепятственный пользовательский опыт и соответствуют самым высоким стандартам качества и производительности. Моя роль заключается в сотрудничестве с межфункциональными командами для создания инновационных функций и обеспечения плавной интеграции с экосистемой Apple. Я увлечен использованием новейших технологий для создания приложений, которые радуют пользователей и повышают их вовлеченность.",
+        expectedCtc: "₽110 тыс. руб. - ₽140 тыс. руб.",
+        location: "Тольяти, Россия",
         image:"avatar2"
       },
       {
-        name: "Denis Nemchenko",
-        role: "Cybersecurity Analyst",
-        company: "Cisco",
+        name: "Денис Немченко",
+        role: "Специалист по кибербезопасности",
+        company: "Яндекс",
         topSkills: ["Penetration Testing", "Network Security"],
-        about: "As a Cybersecurity Analyst at Cisco, I focus on safeguarding organizations from cyber threats through proactive security measures. My skills in penetration testing, network security, and ethical hacking enable me to identify vulnerabilities and implement effective countermeasures. I am dedicated to protecting sensitive data and ensuring compliance with security standards. My approach involves continuous monitoring, threat analysis, and incident response to maintain robust security posture and mitigate risks in an ever-evolving threat landscape.",
-        expectedCtc: "₽250k - 300k RUB",
-        location: "San Jose, United States",
+        about: "В качестве аналитика по кибербезопасности в компании «Яндекс» я занимаюсь защитой организаций от киберугроз с помощью проактивных мер безопасности. Мои навыки в области тестирования на проникновение, сетевой безопасности и этичного взлома позволяют мне выявлять уязвимости и внедрять эффективные контрмеры. Я посвящаю себя защите конфиденциальных данных и обеспечению соответствия стандартам безопасности. Мой подход предполагает постоянный мониторинг, анализ угроз и реагирование на инциденты для поддержания надежной системы безопасности и снижения рисков в условиях постоянно меняющегося ландшафта угроз.",
+        expectedCtc: "₽110 тыс. руб. - ₽140 тыс. руб.",
+        location: "Самара, Россия",
         image:"avatar"
       }
   ];
   const profile={
-    name: "Rustam Rakhmatullov",
-    role: "Software Engineer",
+    name: "Рустам Рахматуллов",
+    role: "Разработчик ПО",
     company: "Google",
-    location: "New York, United States",
-    about: "As a Software Engineer at Google, I specialize in building scalable and high-performance applications. My expertise lies in integrating front-end and back-end technologies to deliver seamless user experiences. With a strong foundation in React and SpringBoot, and a focus on MongoDB for database solutions, I am passionate about leveraging the latest technologies to solve complex problems and drive innovation. My goal is to create impactful software that enhances productivity and meets user needs effectively.",
+    location: "Самара, Россия",
+    about: "В качестве инженера-программиста в Google я специализируюсь на создании масштабируемых и высокопроизводительных приложений. Мой опыт заключается в интеграции фронтенд- и бэкенд-технологий для обеспечения бесшовного пользовательского опыта. Имея прочную основу в React и SpringBoot, а также ориентируясь на MongoDB для решений в области баз данных, я увлечен использованием новейших технологий для решения сложных проблем и стимулирования инноваций. Моя цель - создавать эффективное программное обеспечение, которое повышает производительность и эффективно удовлетворяет потребности пользователей.",
     skills: ["React", "SpringBoot", "MongoDB", "HTML", "CSS", "JavaScript", "Node.js", "Express", "MySQL", "Python", "Django", "Figma", "Sketch", "Docker", "AWS"],
     experience: [
       {
-        title: "Software Engineer III",
+        title: "Разработчик ПО",
         company: "Google",
-        location: "New York, United States",
-        startDate: "Apr 2022",
-        endDate: "Present",
-        description: "As a Software Engineer at Google, I am responsible for designing, developing, and maintaining scalable software solutions that enhance user experience and improve operational efficiency. My role involves collaborating with cross-functional teams to define project requirements, develop technical specifications, and implement robust applications using cutting-edge technologies. I actively participate in code reviews, ensuring adherence to best practices and coding standards, and contribute to the continuous improvement of the development process."
+        location: "Самара, Россия",
+        startDate: "Апрель 2022",
+        endDate: "Апрель 2022",
+        description: "В качестве инженера-программиста в Google я специализируюсь на создании масштабируемых и высокопроизводительных приложений. Мой опыт заключается в интеграции фронтенд- и бэкенд-технологий для обеспечения бесшовного пользовательского опыта. Имея прочную основу в React и SpringBoot, а также ориентируясь на MongoDB для решений в области баз данных, я увлечен использованием новейших технологий для решения сложных проблем и стимулирования инноваций. Моя цель - создавать эффективное программное обеспечение, которое повышает производительность и эффективно удовлетворяет потребности пользователей.",
+
       },
       {
-        title: "Software Engineer",
+        title: "Разработчик ПО",
         company: "Microsoft",
-        location: "Seattle, United States",
-        startDate: "Jun 2018",
-        endDate: "Mar 2022",
-        description: "At Microsoft, I worked on developing and optimizing cloud-based applications, focusing on enhancing performance and scalability. I collaborated with product managers and designers to create innovative features that improved user engagement. My responsibilities included writing clean, maintainable code, performing code reviews, and mentoring junior developers. I played a key role in migrating legacy applications to modern cloud infrastructure, resulting in significant cost savings and improved efficiency."
+        location: "Самара, Россия",
+        startDate: "Июнь 2018",
+        endDate: "Март 2022",
+        description: "В Microsoft я занимался разработкой и оптимизацией облачных приложений, уделяя особое внимание повышению производительности и масштабируемости. Я сотрудничал с менеджерами по продуктам и дизайнерами для создания инновационных функций, которые повышали вовлеченность пользователей. В мои обязанности входило написание чистого, удобного в обслуживании кода, проведение обзоров кода и наставничество младших разработчиков. Я сыграл ключевую роль в переносе устаревших приложений на современную облачную инфраструктуру, что привело к существенной экономии средств и повышению эффективности."
       }
     ],
     certifications: [
       {
-        name: "Google Professional Cloud Architect",
+        name: "Профессиональный архитектор облачных вычислений Google",
         issuer: "Google",
-        issueDate: "Aug 2023",
+        issueDate: "Aвгуст 2023",
         certificateId: "CB72982GG"
       },
       {
-        name: "Microsoft Certified: Azure Solutions Architect Expert",
+        name: "Microsoft: Эксперт по архитектуре решений Azure",
         issuer: "Microsoft",
-        issueDate: "May 2022",
+        issueDate: "Май 2022",
         certificateId: "MS12345AZ"
       }
     ]

@@ -1,19 +1,19 @@
 const companyData={
-    Name: "Google",
-    Overview: "Google is a global leader in technology, specializing in internet-related services and products. Our mission is to organize the world’s information and make it universally accessible and useful. Founded by Larry Page and Sergey Brin, Google has grown into one of the most influential companies in the world, providing innovative tools and services that help billions of people across the globe.",
-    Industry: "Internet, Software & Technology Services",
-    Website: "https://www.google.com",
-    Size: "100,000+ Employees",
-    Headquarters: "Mountain View, California, United States",
-    Specialties: [
-      "Search Engine",
-      "Online Advertising",
-      "Cloud Computing",
-      "Software",
-      "Hardware",
-      "AI & Machine Learning",
-      "Mobile Operating Systems",
-      "Consumer Electronics"
+    Имя: "Google",
+    Обзор: "Google - мировой лидер в области технологий, специализирующийся на предоставлении услуг и продуктов, связанных с Интернетом. Наша миссия - упорядочить мировую информацию и сделать ее универсально доступной и полезной. Основанная Ларри Пейджем и Сергеем Брином, Google превратилась в одну из самых влиятельных компаний в мире, предоставляющую инновационные инструменты и услуги, которые помогают миллиардам людей по всему миру.",
+    Отрасль: "Интернет, программное обеспечение и технологические услуги",
+    Вебсайт: "https://www.google.com",
+    Численность: "100,000+ Работников",
+    "Штаб-квартира": "Маунтин-Вью, Калифорния, Соединенные Штаты Америки",
+    Специализация: [
+      "Поисковые системы, ",
+      "Онлайн-реклама, ",
+      "Облачные вычисления, ",
+      "Программное обеспечение, ",
+      "Аппаратное обеспечение, ",
+      "ИИ и машинное обучение, ",
+      "Мобильные операционные системы, ",
+      "Потребительская электроника. "
     ]
   }
 const similar=[

@@ -11,7 +11,7 @@ const Profile = (props:any) => {
             </div>
             <div className="px-3 mt-16">
                 <div className="text-3xl font-semibold flex justify-between">{props.name}
-                     <Button color="bright-sun.4" variant="light">Message</Button></div>
+                     <Button color="bright-sun.4" variant="light">Сообщение</Button></div>
                 <div className="text-xl flex gap-1 items-center"><IconBriefcase className="h-5 w-5" stroke={1.5}/>
                     {props.role} &bull; {props.company}</div>
                 <div className="flex gap-1 text-lg text-mine-shaft-300 items-center">
@@ -20,14 +20,14 @@ const Profile = (props:any) => {
         </div>
         <Divider mx="xs" my="xl"/>
         <div className="">
-            <div className="text-2xl font-semibold mb-3">About</div>
+            <div className="text-2xl font-semibold mb-3">О себе</div>
             <div className="text-sm text-mine-shaft-300 text-justify">
                 {props.about}
             </div>
         </div>
         <Divider mx="xs" my="xl"/>
         <div className="px-3">
-            <div className="text-2xl font-semibold mb-3">Skills</div>
+            <div className="text-2xl font-semibold mb-3">Навыки</div>
             <div className="flex flex-wrap gap-2">
                 {
                     props.skills.map((skill:any, index:any) => <div key={index} className="bg-bright-sun-300 text-sm font-medium bg-opacity-15 rounded-3xl
@@ -37,7 +37,7 @@ const Profile = (props:any) => {
         </div>
         <Divider mx="xs" my="xl"/>
         <div className="px-3">
-            <div className="text-2xl font-semibold mb-5">Experience</div>
+            <div className="text-2xl font-semibold mb-5">Опыт</div>
             <div className="flex flex-col gap-8">
                 {
                     props.experience.map((exp:any, index:any)=>
@@ -47,7 +47,7 @@ const Profile = (props:any) => {
         </div>
         <Divider mx="xs" my="xl"/>
         <div className="px-3">
-            <div className="text-2xl font-semibold mb-5">Certifications</div>
+            <div className="text-2xl font-semibold mb-5">Сертификаты</div>
             <div className="flex flex-col gap-8">
                 {
                     props.certifications.map((certi:any, index:any)=>

@@ -1,70 +1,70 @@
 const activeJobs=[
     {
-      "jobTitle": "Frontend Developer",
-      "location": "San Francisco, USA",
-      "posted": "5 days ago"
+      "jobTitle": "Фронтенд Разработчик",
+      "location": "Самара, Россия",
+      "posted": "5 дней назад"
     },
     {
-      "jobTitle": "Backend Engineer",
-      "location": "London, UK",
-      "posted": "2 days ago"
+      "jobTitle": "Бэкенд Инженер",
+      "location": "Краснодар, Россия",
+      "posted": "2 дня назад"
     },
     {
-      "jobTitle": "Full Stack Developer",
-      "location": "Sydney, Australia",
-      "posted": "7 days ago"
+      "jobTitle": "Фуллстэк разработчик",
+      "location": "Москва, Россия",
+      "posted": "7 дней назад"
     },
     {
-      "jobTitle": "UI/UX Designer",
-      "location": "Toronto, Canada",
-      "posted": "1 day ago"
+      "jobTitle": "UI/UX Дизайнер",
+      "location": "Торонто, Канада",
+      "posted": "1 день назад"
     },
     {
-      "jobTitle": "DevOps Engineer",
-      "location": "Berlin, Germany",
-      "posted": "4 days ago"
+      "jobTitle": "DevOps Инженер",
+      "location": "Берлин, Германия",
+      "posted": "4 дня назад"
     },
     {
-      "jobTitle": "Mobile App Developer",
-      "location": "Austin, USA",
-      "posted": "8 days ago"
+      "jobTitle": "IOS Разработчик",
+      "location": "Москва, Россия",
+      "posted": "8 дней назад"
     },
     {
-      "jobTitle": "Data Analyst",
-      "location": "Mumbai, India",
-      "posted": "6 days ago"
+      "jobTitle": "Аналитик данных",
+      "location": "Мумбай, Индия",
+      "posted": "6 дней назад"
     },
     {
-      "jobTitle": "Cloud Architect",
-      "location": "Dublin, Ireland",
-      "posted": "3 days ago"
+      "jobTitle": "Облачный архитектор",
+      "location": "Дублин, Ирландия",
+      "posted": "3 дня назад"
     },
     {
-      "jobTitle": "Software Engineer",
-      "location": "Tokyo, Japan",
-      "posted": "9 days ago"
+      "jobTitle": "Разработчик ПО",
+      "location": "Токио, Япония",
+      "posted": "9 дней назад"
     },
     {
-      "jobTitle": "Cybersecurity Specialist",
-      "location": "Paris, France",
-      "posted": "10 days ago"
+      "jobTitle": "Специалист по кибербезопасности",
+      "location": "Уфа, Россия",
+      "posted": "10 дней назад"
     }
   ]
   const drafts=[
     {
-      "jobTitle": "Junior Web Developer",
-      "location": "New York, USA",
-      "posted": "3 days ago"
+      "jobTitle": "Джуниор Веб Разработчик",
+      "location": "Самара, Россия",
+      "posted": "3 дня назад"
     },
     {
-      "jobTitle": "ML Engineer",
-      "location": "Toronto, Canada",
-      "posted": "6 days ago"
+      "jobTitle": "ML инженер",
+      "location": "Самара, Россия",
+      "posted": "6 дней назад"
     },
     {
-      "jobTitle": "DevOps Specialist",
-      "location": "Amsterdam, Netherlands",
-      "posted": "2 days ago"
+      "jobTitle": "DevOps Инженер",
+      "location": "Москва, Россия",
+      "posted": "2 дня назад"
     }
   ]
   

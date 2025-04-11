@@ -14,15 +14,15 @@ const JobDesc = (props:any) => {
                         <img className="h-14" src={`/Icons/Google.png`} alt="" />
                     </div>
                     <div>
-                        <div className="font-semibold txt-2xl">Software Engineer III</div>
-                        <div className="text-lg text-mine-shaft-300">Google &bull; 3 days ago &bull; 48 Applicants</div>
+                        <div className="font-semibold txt-2xl">Разработчик</div>
+                        <div className="text-lg text-mine-shaft-300">Google &bull; 3 дня назад &bull; 34 Отклика</div>
                     </div> 
                 </div>
                 <div className="flex flex-col gap-2 items-center">
                     <Link to={"/apply-job"}>
-                        <Button  color="bright-sun.4" size="sm" variant="light">{props.edit?"Edit":"Apply"}</Button>
+                        <Button  color="bright-sun.4" size="sm" variant="light">{props.edit?"Редактировать":"Откликнуться"}</Button>
                     </Link>
-                    {props.edit?<Button color="red.5" size="sm" variant="outline">Delete</Button>:<IconBookmark className="text-bright-sun-400 cursor-pointer" stroke={1.5}/>}
+                    {props.edit?<Button color="red.5" size="sm" variant="outline">Удалить</Button>:<IconBookmark className="text-bright-sun-400 cursor-pointer" stroke={1.5}/>}
                 </div>
             </div>
                 <Divider my="xl"/>
@@ -39,7 +39,7 @@ const JobDesc = (props:any) => {
                 </div>
                 <Divider my="xl"/>
                 <div>
-                    <div className="text-xl font-semibold mb-5">Required Skills</div>
+                    <div className="text-xl font-semibold mb-5">Требуемые Навыки</div>
                     <div className="flex flex-wrap gap-2">
                         {
                             skills.map((item, index) => <ActionIcon key={index} color="bright-sun.4"
@@ -56,7 +56,7 @@ const JobDesc = (props:any) => {
                 </div>
                 <Divider my="xl"/>
                 <div>
-                    <div className="text-xl font-semibold mb-5">About Company</div>
+                    <div className="text-xl font-semibold mb-5">О компании</div>
                     <div className="flex justify-between mb-3">
                 <div className="flex gap-2 items-center">
                     <div className="p-3 bg-mine-shaft-800 rounded-xl">
@@ -64,17 +64,14 @@ const JobDesc = (props:any) => {
                     </div>
                     <div className="flex flex-col">
                         <div className="font-medium text-lg">Google</div>
-                        <div className=" text-mine-shaft-300">10K+ Employees</div>
+                        <div className=" text-mine-shaft-300">10 тыс+ Сотрудников</div>
                     </div> 
                 </div>
                 <Link to="/company">
-                <Button  color="bright-sun.4" size="sm" variant="light">Company Page</Button>
+                <Button  color="bright-sun.4" size="sm" variant="light">Страница компании</Button>
                 </Link>
             </div>
-            <div className="text-mine-shaft-300 text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Incidunt architecto maiores accusantium odio nemo consectetur velit asperiores deserunt ipsam,
-                beatae quisquam nulla vitae sit qui sint iste mollitia nostrum? 
-                Commodi, ex suscipit incidunt accusamus eaque pariatur facilis obcaecati harum nesciunt.</div>
+            <div className="text-mine-shaft-300 text-justify">Google — транснациональная корпорация из США в составе холдинга Alphabet, инвестирующая в интернет-поиск, облачные вычисления и рекламные технологии. Компания поддерживает и разрабатывает многочисленные интернет-сервисы и продукты, в том числе Gmail, Google Maps, Google Play, Chrome, YouTube, ОС Android.</div>
         </div>
     </div>
 }

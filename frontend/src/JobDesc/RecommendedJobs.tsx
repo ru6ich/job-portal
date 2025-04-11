@@ -3,7 +3,7 @@ import JobCard from "../FindJobs/JobCard";
 
 const RecommendedJobs = () => {
     return <div>
-    <div className="text-xl font-semibold mb-5">Recommended Talent</div>
+    <div className="text-xl font-semibold mb-5">Рекомендуемые соискатели</div>
     <div className="flex flex-col flex-wrap gap-5 justify-around">
         {
             jobList.map((job, index) => index<6 && <JobCard key={index} {...job}/>)
