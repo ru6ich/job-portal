@@ -1,11 +1,6 @@
 import { Menu, Button, Text, rem, Avatar, Switch } from '@mantine/core';
 import {
-  IconSettings,
-  IconSearch,
-  IconPhoto,
   IconMessageCircle,
-  IconTrash,
-  IconArrowsLeftRight,
   IconUserCircle,
   IconFileText,
   IconMoon,
@@ -21,6 +16,7 @@ import { removeUser } from '../Slices/UserSlice';
 const ProfileMenu = () => {
     const dispatch = useDispatch();
     const user = useSelector((state:any)=>state.user);
+    const profile = useSelector((state:any)=>state.profile);
     const [opened, setOpened] = useState(false);
     const [checked, setChecked] = useState(false);
     const handleLogout = () => {
@@ -31,7 +27,7 @@ const ProfileMenu = () => {
       <Menu.Target>
       <div className='flex items-center cursor-pointer gap-3'>
                 <div>{user.name}</div>
-                <Avatar src="avatar.png" alt="it's me" />
+                <Avatar src={profile.picture?`data:image/jpeg;base64,${profile.picture}`:"/avatar.png"} alt="it's me" />
             </div>
       </Menu.Target>
 

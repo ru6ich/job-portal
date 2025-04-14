@@ -1,6 +1,6 @@
 import { ActionIcon } from "@mantine/core"
 import fields from "../Data/Profile";
-import { IconBriefcase, IconChevronsDownLeft, IconDeviceFloppy, IconMapPin, IconPencil } from "@tabler/icons-react";
+import { IconBriefcase, IconCheck, IconChevronsDownLeft, IconDeviceFloppy, IconMapPin, IconPencil, IconX } from "@tabler/icons-react";
 import SelectInput from "./SelectInput";
 import { useState } from "react";
 import { useForm } from "@mantine/form";
@@ -18,23 +18,29 @@ const Info = () => {
         if (!edit){
             setEdit(true);
             form.setValues({jobTitle: profile.jobTitle, company: profile.company, location: profile.location});
-        } else {
-            setEdit(false);
-            let updatedProfile={...profile, ...form.getValues()};
-            dispatch(changeProfile(updatedProfile));
-            successNotification("Успешно","Профиль успешно обновлен");
-        }
+        } else setEdit(false);
     }
     const form = useForm({
         mode: 'uncontrolled',
         initialValues: { jobTitle: '', company: '', location: '' },
         
     });
+    const handleSave = () => {
+        setEdit(false);
+        let updatedProfile={...profile, ...form.getValues()};
+        dispatch(changeProfile(updatedProfile));
+        successNotification("Успешно","Профиль успешно обновлен");
+    }
     return <>
     <div className="text-3xl font-semibold flex justify-between">{user.name}
-                <ActionIcon onClick={handleClick} size="lg" color="bright-sun.4" variant="subtle" aria-label="Settings">
-                    {edit?<IconDeviceFloppy className="h-4/5 w-4/5"/>:<IconPencil className="h-4/5 w-4/5"/>}
-                </ActionIcon></div> 
+                <div>
+                    {edit&&<ActionIcon onClick={handleSave} size="lg" color="green.8" variant="subtle" aria-label="Settings">
+                        <IconCheck className="h-4/5 w-4/5"/>
+                    </ActionIcon>}
+                    <ActionIcon onClick={handleClick} size="lg" color={edit?"red.8":"bright-sun.4"} variant="subtle" aria-label="Settings">
+                        {edit?<IconX className="h-4/5 w-4/5"/>:<IconPencil className="h-4/5 w-4/5"/>}
+                    </ActionIcon>
+                </div></div> 
                 {
                     edit?<><div className="flex gap-10 [&>*]:w-1/2">
                     <SelectInput form={form} name="jobTitle" {...select[0]}/>
