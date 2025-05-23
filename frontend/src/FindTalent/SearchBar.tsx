@@ -5,7 +5,7 @@ import MultiInput from "../FindJobs/MultiInput";
 import { IconUserCircle } from "@tabler/icons-react";
 
 const SearchBar = () => {
-    const [value, setValue] = useState<[number, number]>([1, 100]);
+    const [value, setValue] = useState<[number, number]>([60, 800]);
     return <div className="flex px-5 py-8 items-center !text-mine-shaft-100">
         <div className="flex items-center">
             <div className="text-bright-sun-400 bg-mine-shaft-900 rounded-full p-1 mr-2">
@@ -24,7 +24,7 @@ const SearchBar = () => {
                 <div>Зарплата</div>
                 <div>&#8381;{value[0]} тыс. руб. - &#8381;{value[1]} тыс. руб.</div>
             </div>
-        <RangeSlider color="bright-sun.4" size="xs" value={value} labelTransitionProps={{
+        <RangeSlider color="bright-sun.4" size="xs" value={value} min={60} max={800} step={1} labelTransitionProps={{
           transition: 'skew-down',
           duration: 150,
           timingFunction: 'linear',

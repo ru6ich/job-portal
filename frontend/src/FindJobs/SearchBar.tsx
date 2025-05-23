@@ -4,7 +4,7 @@ import MultiInput from "./MultiInput";
 import { useState } from "react";
 
 const SearchBar = () => {
-    const [value, setValue] = useState<[number, number]>([1, 100]);
+    const [value, setValue] = useState<[number, number]>([60, 800]);
     return <div className="flex px-5 py-8">
         {
             dropdownData.map((item, index) => <> <div key={index} className="w-1/5">
@@ -18,7 +18,7 @@ const SearchBar = () => {
                 <div>Заработная плата</div>
                 <div>&#8381;{value[0]} тыс. руб. - &#8381;{value[1]} тыс. руб.</div>
             </div>
-        <RangeSlider color="bright-sun.4" size="xs" value={value} labelTransitionProps={{
+        <RangeSlider color="bright-sun.4" size="xs" value={value} min={60} max={800} labelTransitionProps={{
           transition: 'skew-down',
           duration: 150,
           timingFunction: 'linear',

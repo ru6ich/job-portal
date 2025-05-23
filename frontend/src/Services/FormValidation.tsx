@@ -2,6 +2,7 @@ const signUpValidation = (name:string, value:string) => {
     switch(name) {
         case "name":
             if (value.length === 0) return "Имя обязательно";
+            if(!/^(?! )[a-zA-Z0-9_ ]{8,15}(?<! )$/.test(value)) return "Логин должен быть от 1 до 15 символов, используются буквы, цифры и пробелы";
             return "";
         case "email":
             if (value.length === 0) return "Email обязателен";
